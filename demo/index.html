@@ -7,15 +7,19 @@
         <title>Document</title>
     </head>
     <body>
-        <img alt="img-1" id="img-1" height="500" width="500" border="1" />
+        <img alt="img-1" id="img-1" border="1" />
+        <img alt="img-2" id="img-2" border="1" />
 
         <script type="module">
             import { generateDiagram } from '../dist/planview.esm.js';
-            import { base } from '../sources/base.js';
+            import { relative_points } from './sources/relative_points.js';
+            import { marker_points } from './sources/marker_points.js';
 
-            const img = document.getElementById('img-1');
-            const { diagram } = generateDiagram(base);
-            img.src = diagram;
+            const img1 = document.getElementById('img-1');
+            img1.src = generateDiagram(relative_points).diagram;
+
+            const img2 = document.getElementById('img-2');
+            img2.src = generateDiagram(marker_points).diagram;
         </script>
     </body>
 </html>
