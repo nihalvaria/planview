@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <img alt="img-1" id="img-1" height="500" width="500" />
+        <script type="module">
+            import { generateDiagram } from '../dist/planview.esm.js';
+            const s = generateDiagram(1, 2);
+            console.log(s);
+        </script>
+    </body>
+</html>
