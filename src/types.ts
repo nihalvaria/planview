@@ -12,6 +12,7 @@ export type TSectionsConfig = {
 export type TDiagramConfig = {
     width: number;
     height: number;
+    backgroundColor?: string;
     sections: TSectionsConfig[];
 };
 

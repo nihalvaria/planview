@@ -10,5 +10,10 @@ export const generateDiagram: TGenerateDiagram = diagramConfig => {
 
     ctx.rect(0, 0, canvas.width, canvas.height);
 
+    if (diagramConfig.backgroundColor) {
+        ctx.fillStyle = diagramConfig.backgroundColor;
+        ctx.fill();
+    }
+
     return { diagram: canvas.toDataURL() };
 };
