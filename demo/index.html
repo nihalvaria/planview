@@ -7,11 +7,15 @@
         <title>Document</title>
     </head>
     <body>
-        <img alt="img-1" id="img-1" height="500" width="500" />
+        <img alt="img-1" id="img-1" height="500" width="500" border="1" />
+
         <script type="module">
             import { generateDiagram } from '../dist/planview.esm.js';
-            const s = generateDiagram(1, 2);
-            console.log(s);
+            import { base } from '../sources/base.js';
+
+            const img = document.getElementById('img-1');
+            const { diagram } = generateDiagram(base);
+            img.src = diagram;
         </script>
     </body>
 </html>
