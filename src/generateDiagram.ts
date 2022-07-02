@@ -1,4 +1,5 @@
 import { TGenerateDiagram } from 'types';
+import { fillColor } from './utils/fillColor';
 
 export const generateDiagram: TGenerateDiagram = diagramConfig => {
     const canvas: HTMLCanvasElement = document.createElement('canvas');
@@ -10,10 +11,14 @@ export const generateDiagram: TGenerateDiagram = diagramConfig => {
 
     ctx.rect(0, 0, canvas.width, canvas.height);
 
-    if (diagramConfig.backgroundColor) {
-        ctx.fillStyle = diagramConfig.backgroundColor;
-        ctx.fill();
-    }
+    fillColor(ctx, diagramConfig.backgroundColor);
+
+    diagramConfig.sections.forEach(section => {
+        ctx.beginPath();
+        section.points.forEach(point => ctx.lineTo(point.x, point.y));
+        fillColor(ctx, section.backgroundColor);
+        ctx.stroke();
+    });
 
     return { diagram: canvas.toDataURL() };
 };

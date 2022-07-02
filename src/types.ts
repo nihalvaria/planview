@@ -6,6 +6,7 @@ export type TPoint2D = {
 export type TSectionsConfig = {
     name?: string;
     rotation?: number;
+    backgroundColor?: string;
     points: TPoint2D[];
 };
 
