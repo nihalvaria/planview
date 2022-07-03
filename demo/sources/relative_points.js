@@ -1,12 +1,11 @@
 export const relative_points = {
     width: 500,
     height: 500,
+    rotation: 0,
     backgroundColor: '#009dff',
     sections: [
         {
             name: "Parent Section",
-            rotation: 75,
-            isParentSection: true,
             backgroundColor: '#B39DDB',
             points: [
                 { x: 100, y: 350 },
@@ -26,7 +25,6 @@ export const relative_points = {
         },
         {
             name: "Room 1",
-            rotation: 75,
             backgroundColor: '#CFD8DC',
             points: [
                 { x: 100, y: 340 },
@@ -38,7 +36,6 @@ export const relative_points = {
         },
         {
             name: "Wardrobe",
-            rotation: 75,
             backgroundColor: '#E1BEE7',
             points: [
                 { x: 100, y: 350 },
@@ -50,7 +47,6 @@ export const relative_points = {
         },
         {
             name: "Washroom",
-            rotation: 75,
             backgroundColor: '#BBDEFB',
             points: [
                 { x: 250, y: 150 },
@@ -62,7 +58,6 @@ export const relative_points = {
         },
         {
             name: "Room 2",
-            rotation: 75,
             backgroundColor: '#CFD8DC',
             points: [
                 { x: 280, y: 250 },
@@ -74,7 +69,6 @@ export const relative_points = {
         },
         {
             name: "Room 3",
-            rotation: 75,
             backgroundColor: '#CFD8DC',
             points: [
                 { x: 280, y: 300 },

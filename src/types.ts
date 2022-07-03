@@ -13,6 +13,7 @@ export type TSectionsConfig = {
 export type TDiagramConfig = {
     width: number;
     height: number;
+    rotation?: number;
     backgroundColor?: string;
     sections: TSectionsConfig[];
 };
