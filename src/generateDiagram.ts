@@ -1,6 +1,5 @@
 import { TGenerateDiagram } from 'types';
-import rotate from './utils/rotate';
-import fillColor from './utils/fillColor';
+import { fillColor } from './utils/styling';
 
 export const generateDiagram: TGenerateDiagram = diagramConfig => {
     const canvas: HTMLCanvasElement = document.createElement('canvas');
