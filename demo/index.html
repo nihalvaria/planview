@@ -5,21 +5,41 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <style>
+            html,
+            body {
+                margin: 0;
+            }
+
+            body {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            img {
+                margin: 20px;
+            }
+        </style>
     </head>
     <body>
         <img alt="img-1" id="img-1" border="1" />
         <img alt="img-2" id="img-2" border="1" />
+        <img alt="img-3" id="img-3" border="1" />
 
         <script type="module">
             import { generateDiagram } from '../dist/planview.esm.js';
-            import { relative_points } from './sources/relative_points.js';
-            import { marker_points } from './sources/marker_points.js';
+            import relative_points from './sources/relative_points.js';
+            import marker_points_1 from './sources/marker_points_1.js';
+            import marker_points_2 from './sources/marker_points_2.js';
 
             const img1 = document.getElementById('img-1');
             img1.src = generateDiagram(relative_points).diagram;
 
             const img2 = document.getElementById('img-2');
-            img2.src = generateDiagram(marker_points).diagram;
+            img2.src = generateDiagram(marker_points_1).diagram;
+
+            const img3 = document.getElementById('img-3');
+            img3.src = generateDiagram(marker_points_2).diagram;
         </script>
     </body>
 </html>
