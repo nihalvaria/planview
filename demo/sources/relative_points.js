@@ -80,3 +80,5 @@ export const relative_points = {
         },
     ]
 };
+
+export default relative_points;
