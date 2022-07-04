@@ -1,4 +1,5 @@
 import { TGenerateDiagram } from 'types';
+import { rotate } from './utils/transform';
 import { fillColor } from './utils/styling';
 
 export const generateDiagram: TGenerateDiagram = diagramConfig => {
