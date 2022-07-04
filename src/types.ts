@@ -14,6 +14,7 @@ export type TDiagramConfig = {
     width: number;
     height: number;
     rotation?: number;
+    autoScale?: boolean;
     centerOrigin?: boolean;
     backgroundColor?: string;
     sections: TSectionsConfig[];
