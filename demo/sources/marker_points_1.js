@@ -3,6 +3,7 @@ export const marker_points = {
     height: 500,
     rotation: 10,
     autoScale: true,
+    drawingArea: 0.8,
     centerOrigin: true,
     backgroundColor: '#009dff',
     sections: [
